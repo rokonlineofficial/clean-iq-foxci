@@ -1,0 +1,427 @@
+/* ==========================================================================
+   Cleaning Booking Calculator - Complete Stylesheet
+   Brand colours (+ white):
+   - #2B275A  Navy   (form background)
+   - #00BFA5  Teal   (fields / buttons / accents)
+   - #EB1E63  Pink   (errors)
+   - #9DEF31  Lime   (reserved)
+   Brand fonts:
+   - ITC Avant Garde Gothic is used for the whole quote form (buttons, subtitles, everything).
+     The font must be loaded by the site/theme; fallbacks are listed below.
+   ========================================================================== */
+
+/* 1. Form Container & Global Reset */
+.cbc-form-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto;
+    padding: 45px 35px;
+    background-color: #2B275A !important;
+    background: #2B275A !important;
+    color: #ffffff !important;
+    font-family: "ITC Avant Garde Gothic", "ITC Avant Garde Gothic Std", "Avant Garde", "Century Gothic", CenturyGothic, "URW Gothic", Questrial, sans-serif;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.cbc-form-wrapper * {
+    box-sizing: border-box;
+}
+
+.cbc-form-wrapper input,
+.cbc-form-wrapper select,
+.cbc-form-wrapper textarea,
+.cbc-form-wrapper button,
+.cbc-form-wrapper label,
+.cbc-form-wrapper h3,
+.cbc-form-wrapper a {
+    font-family: inherit !important;
+}
+
+/* 2. Success / Error Alert Messages */
+.cbc-alert-success {
+    background-color: #ffffff;
+    color: #2B275A;
+    border: 2px solid #00BFA5;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cbc-alert-error {
+    background-color: #ffffff;
+    color: #2B275A;
+    border: 2px solid #EB1E63;
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+.cbc-alert-error ul {
+    margin: 8px 0 0 18px;
+    padding: 0;
+    list-style: disc;
+}
+
+/* Honeypot: invisible to people */
+.cbc-hp {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* "Included" tag next to extras that come with the chosen service */
+.cbc-included-tag {
+    margin-left: 8px;
+    padding: 1px 8px;
+    border-radius: 10px;
+    background-color: #00BFA5;
+    color: #2B275A;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.cbc-included-tag[hidden] {
+    display: none;
+}
+
+/* 3. Section Breathability & Spacing (Desktop: 80px) */
+.cbc-section {
+    margin-bottom: 80px;
+}
+
+.cbc-section:last-child,
+.cbc-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.cbc-section-header {
+    text-align: center;
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+.cbc-section-header::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 191, 165, 0.4) !important;
+    z-index: 1;
+}
+
+.cbc-section-title {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-color: #2B275A !important;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #00BFA5 !important;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* 4. Labels & Text */
+.cbc-field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.cbc-field-group label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* 5. 46px Input Fields & Dropdowns (#00BFA5 Background) */
+.cbc-field-group input[type="text"],
+.cbc-field-group input[type="email"],
+.cbc-field-group input[type="tel"],
+.cbc-field-group input[type="number"],
+.cbc-field-group input[type="date"],
+.cbc-field-group input[type="time"],
+.cbc-field-group select {
+    width: 100%;
+    height: 46px;
+    min-height: 46px;
+    padding: 0 14px;
+    background-color: #00BFA5 !important;
+    border: 1px solid #00BFA5 !important;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111 !important;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cbc-field-group textarea {
+    width: 100%;
+    min-height: 96px;
+    padding: 12px 14px;
+    background-color: #00BFA5 !important;
+    border: 1px solid #00BFA5 !important;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111111 !important;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cbc-field-group select option {
+    background-color: #00BFA5 !important;
+    color: #111111 !important;
+}
+
+.cbc-field-group select option[disabled] {
+    color: #444444 !important;
+}
+
+.cbc-field-group input:focus,
+.cbc-field-group select:focus,
+.cbc-field-group textarea:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 8px rgba(0, 191, 165, 0.8) !important;
+}
+
+/* 6. Service Description Link Area */
+.cbc-service-desc-text {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff !important;
+    letter-spacing: 0.5px;
+}
+
+.cbc-inline-link {
+    color: #00BFA5 !important;
+    text-decoration: underline;
+    font-weight: 900;
+    padding: 0 3px;
+    transition: color 0.2s ease;
+}
+
+.cbc-inline-link:hover {
+    color: #ffffff !important;
+}
+
+/* 7. Grid Systems */
+.cbc-grid {
+    display: grid;
+    column-gap: 18px;
+    row-gap: 25px;
+}
+
+.cbc-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cbc-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* 8. Add Extras Checkboxes */
+.cbc-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 18px;
+    margin-top: 24px;
+}
+
+.cbc-checkbox-item,
+.cbc-radio-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+    color: #ffffff !important;
+    user-select: none;
+}
+
+.cbc-checkbox-item input,
+.cbc-radio-item input {
+    margin-right: 8px;
+    width: 17px;
+    height: 17px;
+    accent-color: #00BFA5 !important;
+    cursor: pointer;
+}
+
+/* 9. Laundry Section */
+.cbc-laundry-group {
+    margin-top: 30px;
+}
+
+.cbc-laundry-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 12px;
+}
+
+.cbc-radio-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* 10. Estimated Total Box */
+.cbc-total-section {
+    margin-bottom: 80px;
+}
+
+.cbc-total-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 8px;
+}
+
+.cbc-total-display-input {
+    width: 100%;
+    height: 46px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    background-color: #00BFA5 !important;
+    border: 1px solid #00BFA5 !important;
+    border-radius: 4px;
+    padding: 0 16px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #111111 !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 12. Notice Banner */
+.cbc-notice-banner {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 900;
+    color: #00BFA5 !important;
+    margin: 28px 0;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+}
+
+.cbc-col-comments {
+    grid-column: span 1;
+}
+
+/* 13. Terms & Conditions */
+.cbc-terms-row {
+    margin: 30px 0 35px 0;
+}
+
+.cbc-terms-label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.cbc-terms-label input {
+    margin-right: 8px;
+    width: 17px;
+    height: 17px;
+    accent-color: #00BFA5 !important;
+}
+
+.cbc-terms-link {
+    color: #00BFA5 !important;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* 14. Submit Button (Centered) */
+.cbc-submit-button {
+    display: block;
+    margin: 0 auto;
+    height: 46px;
+    line-height: 44px;
+    background-color: #00BFA5 !important;
+    color: #2B275A !important;
+    border: 1px solid #00BFA5 !important;
+    padding: 0 50px;
+    font-size: 15px;
+    font-weight: 900;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cbc-submit-button:hover {
+    background-color: #00a68f !important;
+    border-color: #00a68f !important;
+    transform: translateY(-1px);
+}
+
+/* 15. Responsive: Tablet View */
+@media (max-width: 992px) {
+    .cbc-section,
+    .cbc-total-section {
+        margin-bottom: 50px;
+    }
+
+    .cbc-checkbox-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 16. Responsive: Mobile View */
+@media (max-width: 768px) {
+    .cbc-form-wrapper {
+        padding: 25px 16px;
+    }
+
+    .cbc-section,
+    .cbc-total-section {
+        margin-bottom: 35px;
+    }
+
+    .cbc-grid-3,
+    .cbc-grid-2,
+    .cbc-checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cbc-section-title {
+        font-size: 17px;
+        padding: 0 10px;
+    }
+
+    .cbc-notice-banner {
+        font-size: 15px;
+    }
+
+    .cbc-submit-button {
+        width: 100%;
+        text-align: center;
+    }
+}

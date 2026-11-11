@@ -1,0 +1,46 @@
+{
+    "services": {
+        "House Cleaning": {
+            "label": "House Cleaning",
+            "rate_cents": 19,
+            "included": []
+        },
+        "Move In/Move Out Cleaning": {
+            "label": "Move-In/Move-Out (includes fridge, oven, and microwave)",
+            "rate_cents": 21,
+            "included": ["INSIDE THE FRIDGE", "INSIDE OVEN", "INSIDE MICROWAVE"]
+        },
+        "Short Term Rental Service": {
+            "label": "Short Term Rental Service",
+            "rate_cents": 23,
+            "included": ["INSIDE THE FRIDGE", "INSIDE OVEN", "INSIDE MICROWAVE"]
+        },
+        "Post-renovation Cleaning": {
+            "label": "Post-renovation Cleaning",
+            "rate_cents": 25,
+            "included": ["INSIDE THE FRIDGE", "INSIDE OVEN", "INSIDE MICROWAVE", "INTERIOR WINDOWS"]
+        }
+    },
+    "min_base": { "below_sqft": 1000, "cents": 7500 },
+    "bathroom_cents": 1000,
+    "half_bath_cents": 500,
+    "kitchen_cents": 5000,
+    "extras": {
+        "INSIDE THE FRIDGE": 2500,
+        "INSIDE OVEN": 3500,
+        "INSIDE MICROWAVE": 1000,
+        "INTERIOR WINDOWS": 4500,
+        "LAUNDRY ROOM": 1000,
+        "BOILER ROOM": 1000,
+        "INSIDE KITCHEN CABINETS": 3500,
+        "BLINDS": 4500,
+        "LIGHTSWITCHES": 1500,
+        "INSIDE BATHROOM CABINETS": 1000,
+        "BASEBOARDS": 4500,
+        "LINEN CHANGE (if provided)": 900
+    },
+    "laundry": {
+        "On-site - $20 per load": 2000,
+        "Off-site - $5/pound": 500
+    }
+}
